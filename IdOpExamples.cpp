@@ -35,7 +35,9 @@ IDOP_CREATE( _ ,
 	)
 )
 
+IDOP_CREATE_LEFT_HANDED_RET(<, xchg, >, Examples::Swap, void)		// x <xchg> y <=> tmp = x; x = y; y = x;
 
+IDOP_CREATE_LEFT_HANDED_RET(<, plusequals, >, Examples::AddLeft, IDOP_OPERAND_TYPE &)  // x <plusequals> y <=> x += y
 
 
 int main()
@@ -63,8 +65,23 @@ int main()
 
 	cout << "foo |_- bar == " << (foo |_- bar) << endl;
 
-	const char* s1 = "Hello, World!";
-	cout << "True or false: \"Hello, World!\" contains \"Hello\"? " << boolalpha << (s1 contains "Hello") << endl;
+	const char* sz1 = "Hello, World!";
+	cout << "True or false: \"Hello, World!\" contains \"Hello\"? " << boolalpha << (sz1 contains "Hello") << endl;
+
+	
+	string s1 = "Left";
+	string s2 = "Right";
+
+	s1 <xchg> s2;
+
+	cout << "s1: " << s1 << " s2: " << s2 << endl;
+
+	double baz = 38;
+	const double xyzzy = 2;
+
+	baz <plusequals> xyzzy <plusequals> xyzzy;
+
+	cout << "The answer to the ultimate question: " << baz << endl;
 
 	return 0;
 }

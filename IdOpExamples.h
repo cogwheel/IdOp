@@ -44,13 +44,6 @@ namespace Examples {
 	};
 
 	template<typename T>
-	class AddLeft {
-	public:
-		T& operator()(T& left, const T& right) const
-		{ left += right; return left; }
-	};
-
-	template<typename T>
 	class ThrowNotEqual {
 	public:
 		void operator()(const T& left, const T& right) const
@@ -84,6 +77,21 @@ namespace Examples {
 		bool operator()(const T& left, const T& right) const
 		{ return std::string(left).find(right) != std::string::npos; }
 	};
+
+	template<typename T>
+	class Swap {
+	public:
+		void operator()(T& left, T& right) const
+		{ T temp = left; left = right; right = temp; }
+	};
+
+	template<typename T>
+	class AddLeft {
+	public:
+		T& operator()(T& left, const T& right) const
+		{ left += right; return left; }
+	};
+
 
 }
 

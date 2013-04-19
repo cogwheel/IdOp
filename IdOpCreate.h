@@ -13,6 +13,9 @@
 #include "IdOpCreateLeft.h"
 #include "IdOpCreateRight.h"
 
+#define IDOP_OPERAND_TYPE OperationType
+#define IDOP_OPERATOR_TYPE OperatorType
+
 
 // Creates the global identifier constant and then proceeds to generate the operator templates
 #define IDOP_CREATE_BASE(identifier, IdentifierType, primaryOps) \

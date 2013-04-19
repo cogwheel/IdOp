@@ -1,4 +1,4 @@
-// IdOp v0.9 - Custom Operator Library
+// IdOp v1.0 - Custom Operator Library
 //
 // http://cogwheel.info/idop/
 //
@@ -24,9 +24,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 // TODO documentation
 
-// TODO allow non-const operands
 
 
 #ifndef _IDOP_H_
@@ -38,13 +38,13 @@
 // leftOp must have higher or equal precedence relative to rightOp
 // Return type defaults to the type of the left operand at the point of use
 #define IDOP_CREATE_LEFT_HANDED(leftOp, identifier, rightOp, OperationType) \
-	IDOP_CREATE_LEFT_HANDED_RET(leftOp, identifier, rightOp, OperationType, OperandType)
+	IDOP_CREATE_LEFT_HANDED_RET(leftOp, identifier, rightOp, OperationType, IDOP_OPERAND_TYPE)
 
 // Create a monomorphic operator (no other operators can be made from the same identifier)
 // rightOp must have higher (not equal) precedence relative to leftOp
 // Return type defaults to the operand type.
 #define IDOP_CREATE_RIGHT_HANDED(leftOp, identifier, rightOp, OperationType) \
-	IDOP_CREATE_RIGHT_HANDED_RET(rightOp, identifier, leftOp, OperationType, OperandType)
+	IDOP_CREATE_RIGHT_HANDED_RET(rightOp, identifier, leftOp, OperationType, IDOP_OPERAND_TYPE)
 
 // Create a monomorphic operator (no other operators can be made with the same identifier)
 // leftOp must have higher or equal precedence relative to rightOp
@@ -79,7 +79,7 @@
 // Create an operation
 // Assumes the operation returns the same type as the operands
 #define IDOP_OPERATION(op, OperationType) \
-	((op, OperationType, OperandType))
+	((op, OperationType, IDOP_OPERAND_TYPE))
 
 // Create a left-handed set of operations
 // leftOp must have higher or equal precedence relative to all the given operations
