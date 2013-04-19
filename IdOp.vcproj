@@ -205,10 +205,6 @@
 				>
 			</File>
 		</Filter>
-		<File
-			RelativePath=".\index.html"
-			>
-		</File>
 	</Files>
 	<Globals>
 	</Globals>

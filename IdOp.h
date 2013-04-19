@@ -1,4 +1,4 @@
-// IdOp v1.0 - Custom Operator Library
+// IdOp v1.0.1 - Custom Operator Library
 //
 // http://cogwheel.info/idop/
 //
@@ -23,6 +23,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
 
 
 // TODO documentation

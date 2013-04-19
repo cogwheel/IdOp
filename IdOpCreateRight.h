@@ -31,7 +31,7 @@
 #define IDOP_RIGHT_OPERATION_LIST_ITEM_BASE(operation, constQualifier, opInfo, index) \
 	friend IDOP_GET_RETURN_TYPE(operation) operator IDOP_GET_OPERATOR(operation) ( \
 		constQualifier IDOP_OPERAND_TYPE& left, \
-		IDOP_GET_RIGHT_PARAM_TYPE(opInfo)& right \
+		const IDOP_GET_RIGHT_PARAM_TYPE(opInfo)& right \
 	) \
 	{ return right.IDOP_OPERATION_OBJECT_MEMBER(index)(left, right._obj); }
 
