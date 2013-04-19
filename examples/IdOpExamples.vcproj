@@ -181,23 +181,23 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\IdOp.h"
+				RelativePath="..\include\IdOp.h"
 				>
 			</File>
 			<File
-				RelativePath=".\IdOpCreate.h"
+				RelativePath="..\include\IdOpCreate.h"
 				>
 			</File>
 			<File
-				RelativePath=".\IdOpCreateCommon.h"
+				RelativePath="..\include\IdOpCreateCommon.h"
 				>
 			</File>
 			<File
-				RelativePath=".\IdOpCreateLeft.h"
+				RelativePath="..\include\IdOpCreateLeft.h"
 				>
 			</File>
 			<File
-				RelativePath=".\IdOpCreateRight.h"
+				RelativePath="..\include\IdOpCreateRight.h"
 				>
 			</File>
 			<File
