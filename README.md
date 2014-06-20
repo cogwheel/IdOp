@@ -28,6 +28,10 @@ See IdOpExamples.cpp or the [IdOp Reference](http://cogwheel.info/idop/reference
 
 Requires Boost.Preprocessor
 
+## TODO
+
+Simplify all the things with C++11/14 features (especially generic lambdas)
+
 ## History
 
 2009-10-05 20:33 - v1.0.1
