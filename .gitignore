@@ -15,3 +15,9 @@
 # Temporary Files
 *~
 *.swp
+.vs/
+.user
+
+# Build dirs
+Debug/
+Release/
